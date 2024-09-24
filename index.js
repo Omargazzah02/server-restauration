@@ -28,6 +28,14 @@ admin.initializeApp({
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
+
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+
+
 // Route pour l'inscription des passagers
 app.post('/signup', (req, res) => {
     const { email, password, name, role } = req.body;
